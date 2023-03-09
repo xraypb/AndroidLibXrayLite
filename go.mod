@@ -3,7 +3,7 @@ module github.com/2dust/AndroidLibXrayLite
 go 1.20
 
 require (
-	github.com/xtls/xray-core v1.7.5
+	github.com/xraypb/Xray-core v1.7.6
 	golang.org/x/mobile v0.0.0-20221020085226-b36e6246172e
 	golang.org/x/sys v0.5.0
 )
@@ -11,6 +11,7 @@ require (
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
 	github.com/dgryski/go-metro v0.0.0-20211217172704-adc40b04c140 // indirect
+	github.com/djoeni/websocket v0.7.1 // indirect
 	github.com/francoispqt/gojay v1.2.13 // indirect
 	github.com/ghodss/yaml v1.0.1-0.20220118164431-d8423dcdf344 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20210107165309-348f09dbbbc0 // indirect
@@ -18,7 +19,6 @@ require (
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/btree v1.1.2 // indirect
 	github.com/google/pprof v0.0.0-20230207041349-798e818bf904 // indirect
-	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/klauspost/compress v1.15.15 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.3 // indirect
 	github.com/miekg/dns v1.1.51 // indirect
@@ -34,9 +34,8 @@ require (
 	github.com/sagernet/sing-shadowsocks v0.1.1 // indirect
 	github.com/sagernet/wireguard-go v0.0.0-20221116151939-c99467f53f2c // indirect
 	github.com/seiflotfy/cuckoofilter v0.0.0-20220411075957-e3b120b3f5fb // indirect
-	github.com/stretchr/testify v1.8.2 // indirect
 	github.com/v2fly/ss-bloomring v0.0.0-20210312155135-28617310f63e // indirect
-	github.com/xtls/go v0.0.0-20230107031059-4610f88d00f3 // indirect
+	github.com/xtls/reality v0.0.0-20230308170557-1c3141866eb7 // indirect
 	go.starlark.net v0.0.0-20230128213706-3f75dec8e403 // indirect
 	go.uber.org/atomic v1.10.0 // indirect
 	golang.org/x/crypto v0.6.0 // indirect
