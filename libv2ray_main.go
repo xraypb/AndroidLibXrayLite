@@ -16,23 +16,24 @@ import (
 
 	mobasset "golang.org/x/mobile/asset"
 
-	v2core "github.com/xtls/xray-core/core"
-	v2net "github.com/xtls/xray-core/common/net"
-	v2filesystem "github.com/xtls/xray-core/common/platform/filesystem"
-	v2stats "github.com/xtls/xray-core/features/stats"
-	v2serial "github.com/xtls/xray-core/infra/conf/serial"
-	_ "github.com/xtls/xray-core/main/distro/all"
-	v2internet "github.com/xtls/xray-core/transport/internet"
+	v2net "github.com/xraypb/Xray-core/common/net"
+	v2filesystem "github.com/xraypb/Xray-core/common/platform/filesystem"
+	v2core "github.com/xraypb/Xray-core/core"
+	v2stats "github.com/xraypb/Xray-core/features/stats"
+	v2serial "github.com/xraypb/Xray-core/infra/conf/serial"
+	_ "github.com/xraypb/Xray-core/main/distro/all"
+	v2internet "github.com/xraypb/Xray-core/transport/internet"
 
-	v2applog "github.com/xtls/xray-core/app/log"
-	v2commlog "github.com/xtls/xray-core/common/log"
+	v2applog "github.com/xraypb/Xray-core/app/log"
+	v2commlog "github.com/xraypb/Xray-core/common/log"
 )
 
 const (
 	v2Asset = "xray.location.asset"
 )
 
-/*V2RayPoint V2Ray Point Server
+/*
+V2RayPoint V2Ray Point Server
 This is territory of Go, so no getter and setters!
 */
 type V2RayPoint struct {
@@ -114,7 +115,7 @@ func (v *V2RayPoint) StopLoop() (err error) {
 	return
 }
 
-//Delegate Funcation
+// Delegate Funcation
 func (v V2RayPoint) QueryStats(tag string, direct string) int64 {
 	if v.statsManager == nil {
 		return 0
@@ -197,7 +198,7 @@ func InitV2Env(envPath string) {
 	}
 }
 
-//Delegate Funcation
+// Delegate Funcation
 func TestConfig(ConfigureFileContent string) error {
 	_, err := v2serial.LoadJSONConfig(strings.NewReader(ConfigureFileContent))
 	return err
@@ -244,11 +245,12 @@ func NewV2RayPoint(s V2RayVPNServiceSupportsSet, adns bool) *V2RayPoint {
 	}
 }
 
-/*CheckVersionX string
+/*
+CheckVersionX string
 This func will return libv2ray binding version and V2Ray version used.
 */
 func CheckVersionX() string {
-	var version  = 24
+	var version = 24
 	return fmt.Sprintf("Lib v%d, Xray-core v%s", version, v2core.Version())
 }
 
